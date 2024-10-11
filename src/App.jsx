@@ -3,11 +3,14 @@ import './App.css';
 import Tmdb from './Tmdb.js';
 import MovieRow from './components/movierow.jsx';
 import FeaturedMovie from './components/FeaturedMovie.jsx';
+import Header from './components/header.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   
   const [movieList, setMovieList] = useState([]);
   const [featured, setFeatured] = useState(null);
+  const [headerBackground, setHeaderBackground] = useState(false);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -25,10 +28,28 @@ function App() {
     loadAll();
   }, []); 
 
+  useEffect(() => {
+    const scrollListener = () => {
+      if(window.scrollY > 10) {
+        setHeaderBackground(true);
+      }
+      else {
+        setHeaderBackground(false)
+      }
+    }
+
+    window.addEventListener('scroll', scrollListener);
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, [])
+
 
   return (
     <div className="app">
       <section>
+        <Header headerBackground={headerBackground} />
         {featured &&
           <FeaturedMovie item={featured}/>
         }
@@ -41,6 +62,14 @@ function App() {
             )
           )}
       </section>
+      <section>
+        <Footer />
+      </section>
+      
+
+      {movieList <= 0 && <div className="loading">
+        <img src="https://media.wired.com/photos/592744d3f3e2356fd800bf00/master/w_2560%2Cc_limit/Netflix_LoadTime.gif" alt="Carregando..." />
+      </div>}
     </div>
   )
 }

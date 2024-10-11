@@ -1,0 +1,26 @@
+header {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    padding: 0 30px;
+    background: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.header__black {
+    background-color: #141414;
+}
+
+.header__logo, .header__logo a, .header__logo img {
+    height: 30px;
+}
+
+.header__user, .header__user a, .header__user img {
+    height: 40px;
+}

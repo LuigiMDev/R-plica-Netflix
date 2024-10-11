@@ -1,0 +1,17 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 8px;
+}
+
+footer span {
+    color: rgb(235, 24, 24);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(80, 80, 223);
+}
