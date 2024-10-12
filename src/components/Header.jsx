@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.css'
 
-const Header = ({headerBackground}) => {
+const Header = ({headerBackground, perfil}) => {
   return (
     <header className={headerBackground && 'header__black'}>
         <div className="header__logo">
@@ -11,7 +11,7 @@ const Header = ({headerBackground}) => {
         </div>
         <div className="header__user">
             <a href="/">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Usuário" />
+                <img src={perfil} alt="Usuário" />
             </a>
         </div>
     </header>

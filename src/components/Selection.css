@@ -1,0 +1,60 @@
+.selection__div {
+    width: 100vw;
+    height: 100vh;
+    background-color: #010101;
+    position: absolute;
+    z-index: 999;
+}
+
+.selection__header {
+    position: absolute;
+}
+
+.header__div, .header__div a, .header__div img {
+    height: 30px;
+}
+
+.selection__section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.selection__section h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.perfis {
+    display: flex;
+    justify-content: center;
+}
+
+.perfis div {
+    width: 180px;
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.perfis div:hover {
+    transform: scale(1);
+}
+
+.perfis img {
+    width: 100%;
+}
+
+@media screen and (max-width: 860px) {
+    
+    .selection__section h1 {
+        font-size: 4vw;
+    }
+    .perfis div {
+        width: 18%;
+    }
+}
