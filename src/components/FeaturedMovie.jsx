@@ -31,8 +31,8 @@ const FeaturedMovie = ({item}) => {
             <p>{description}</p>
           </div>
           <div className="featured__buttons">
-            <a className='featured__watchButton' href={`/watch/${item.id}`}>▶ Assistir</a>
-            <a className='featured__myListButton' href={`/list/add/${item.id}`}>+ Minha Lista</a>
+            <a className='featured__watchButton' href="#">▶ Assistir</a>
+            <a className='featured__myListButton' href="#">+ Minha Lista</a>
           </div>
           <div className="featured__genres">
             <p><strong>Gêneros</strong>: {genres.join(', ')}</p>

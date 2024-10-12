@@ -16,7 +16,7 @@ const Selection = ({setPerfil}) => {
     <div className="selection__div">
       <header className="selection__header">
         <div className="header__div">
-          <a href="/">
+          <a href="#">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
               alt="Netflix"
